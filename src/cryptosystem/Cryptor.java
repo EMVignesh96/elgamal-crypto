@@ -23,6 +23,11 @@ public class Cryptor {
     static BigInteger c1dInverse;
     PublicKeys publicKeys;
     PrivateKey privateKey;
+    
+    public Cryptor(PublicKeys publicKeys) {
+        r = getRandomR(publicKeys.getP());
+        this.publicKeys = publicKeys;
+    }
 
     public Cryptor(PublicKeys publicKeys, PrivateKey privateKey) {
         r = getRandomR(publicKeys.getP());
@@ -87,7 +92,7 @@ public class Cryptor {
     }
     
     public static void main(String args[]) {
-        String plainText = "Vignesh";
+        String plainText = "Hacker!";
         ElGamalKeys elGamalKeys = new ElGamalKeys();
         Cryptor cryptor = new Cryptor(elGamalKeys.getPublicKeys(), elGamalKeys.getPrivateKey());
         String c1 = cryptor.encyptedC1();
