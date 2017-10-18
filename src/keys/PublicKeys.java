@@ -1,6 +1,7 @@
 package keys;
 
 
+import java.io.Serializable;
 import java.math.BigInteger;
 
 /*
@@ -13,7 +14,7 @@ import java.math.BigInteger;
  *
  * @author vignesh
  */
-public class PublicKeys {
+public class PublicKeys implements Serializable{
     private final BigInteger e1;
     private final BigInteger e2;
     private final BigInteger p;
@@ -22,8 +23,7 @@ public class PublicKeys {
         this.e1 = e1;
         this.e2 = e2;
         this.p = p;
-        
-        System.out.println("e1: " + e1 + " e2: " + e2 + " p: " + p);
+        //System.out.println("e1: " + e1 + " e2: " + e2 + " p: " + p);
     }
     
     public BigInteger getE1() {

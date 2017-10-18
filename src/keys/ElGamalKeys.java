@@ -64,17 +64,4 @@ public class ElGamalKeys {
        
         return result;
     }
-    
-    /*
-    public static void main(String args[]) {
-        ElGamalKeys elGamalKeys = new ElGamalKeys();
-        PrivateKey privateKey = elGamalKeys.getPrivateKey();
-        PublicKeys publicKeys = elGamalKeys.getPublicKeys();
-        
-        System.out.println("p  " + publicKeys.getP());
-        System.out.println("e1 " + publicKeys.getE1());
-        System.out.println("e2 " + publicKeys.getE2());
-        System.out.println("d  " + privateKey.getPrivateKey());
-    }
-    */
 }

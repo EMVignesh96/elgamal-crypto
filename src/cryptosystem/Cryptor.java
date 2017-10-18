@@ -27,13 +27,14 @@ public class Cryptor {
     public Cryptor(PublicKeys publicKeys) {
         r = getRandomR(publicKeys.getP());
         this.publicKeys = publicKeys;
+        System.out.println("r: " + r);
     }
 
     public Cryptor(PublicKeys publicKeys, PrivateKey privateKey) {
         r = getRandomR(publicKeys.getP());
         this.privateKey = privateKey;
         this.publicKeys = publicKeys;
-        System.out.println("r: " + r);
+        //System.out.println("r: " + r);
     }
     
     private BigInteger getRandomR(BigInteger p) {
